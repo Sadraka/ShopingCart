@@ -1,0 +1,56 @@
+
+.footer {
+    height: 40px;
+    background-color: #384242;
+    color: rgb(234, 232, 230);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+
+
+}
+
+.footer p {
+    position: relative;
+    /* mohem */
+}
+
+.footer p span {
+    color: yellowgreen;
+    position: absolute;
+    /* mohem baraye taghir nakardan hardo tag dar sorat transition ya animation az position absolute mitanim estefade konim */
+    margin-right: 5px;
+}
+
+.footer p span {
+    /* font-size: 1.1rem; */
+    animation-name: heart;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes heart {
+    20% {
+        font-size: 1.2rem;
+        text-shadow: 5px 5px 10px, -5px -5px 10px, 5px -5px 10px, -5px 5px 10px;
+    }
+
+    40% {
+        font-size: 1.3rem;
+        text-shadow: 5px 5px 10px, -5px -5px 10px, 5px -5px 10px, -5px 5px 10px;
+
+    }
+
+    60% {
+        font-size: 1.2rem;
+    }
+
+    80% {
+        font-size: 1.2rem;
+
+    }
+
+    100% {
+        font-size: 1rem;
+    }
+}

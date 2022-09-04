@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Homepage from "./components/Homepage";
+import ProductsFunc from "./components/Products/ProductsFunc"
+import ProductDetail from './components/Products/Productsco/ProductDetail';
+import { Route, Routes , Navigate,  } from "react-router-dom";
+import ProductsContexProvider from './components/Products/ProductsContexProvider';
+import CardContextProvider from './components/Cart/CartContextProvider';
+import Cart from './components/Cart/Cart';
+class App extends Component {
+    render() {
+        return (
+            <>
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+                <ProductsContexProvider>
+                    <CardContextProvider>
+                        <Navbar />
+                        <Routes>
+
+                            <Route path="/products/:id" element={<ProductDetail/>} />
+                            <Route path="/cart" element={<Cart/>} />
+                            <Route path="/products" element={<ProductsFunc/>} />
+                            <Route exact path="/" element={<Homepage/>} />
+                            <Route path='/*' element={<Navigate to="/" />}/>
+                        </Routes>
+                    </CardContextProvider>
+                </ProductsContexProvider>
+                <Footer />
+            </>
+        );
+    }
 }
 
 export default App;

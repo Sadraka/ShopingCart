@@ -1,0 +1,47 @@
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    animation: newanimmain 500ms ease ;
+
+}
+/* mohem @keyframes */
+@keyframes newanimmain {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity:1;
+    } 
+    
+}
+
+@media (max-width:900px) {
+
+        .cards {
+            display: grid;
+            /* grid-template-columns: 250px 250px;
+            grid-row-gap: 30px;
+            justify-content: center; */
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 30px;
+            justify-items: center;
+            animation: newanim 300ms ease ;
+
+            /* mohem */
+        
+    }
+    @keyframes newanim {
+        from{
+            opacity: 0;
+            
+            
+        }  
+        to{
+            opacity: 1;
+            
+
+        }     
+    }
+
+}

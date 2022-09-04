@@ -1,0 +1,46 @@
+.box {
+    height: 180px;
+    background-color: rgb(47, 225, 238);
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box h1 {
+    /* position: absolute;
+    right: 100px; */
+    font-family: "Sensbold";
+    color: #ffffff;
+    font-size: 3rem;
+    padding-left: 100px;
+}
+
+.box input {
+    /* position: absolute; */
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    /* left: 100px; */
+    outline: none;
+    padding: 5px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.input span {
+    height: 24px;
+    color: #ffffff;
+}
+
+.box input::placeholder {
+    font-size: 1.5rem;
+    /* mohem */
+
+}

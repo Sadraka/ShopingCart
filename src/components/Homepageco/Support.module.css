@@ -1,0 +1,34 @@
+.support {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 400px;
+}
+
+.support .h {
+    display: flex;
+    justify-content: center;
+}
+
+.support h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: "Sensbold";
+}
+
+.support .img {
+    display: flex;
+    justify-content: space-around;
+}
+
+.support .img img {
+    height: 250px;
+    transition: all 0.2s ease;
+
+}
+
+.support .img img:hover {
+    cursor: pointer;
+    height: 300px;
+}
